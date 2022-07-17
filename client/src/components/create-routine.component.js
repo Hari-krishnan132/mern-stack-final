@@ -16,7 +16,10 @@ const Exercise = props => (
 
 export default class CreateRoutine extends Component {
   constructor(props) {
+   
+
     super(props);
+    
 
     this.onChangeRoutinename = this.onChangeRoutinename.bind(this);
     this.onChangeRoutineType = this.onChangeRoutineType.bind(this);
@@ -97,11 +100,11 @@ export default class CreateRoutine extends Component {
         <form onSubmit={this.onSubmit}>
         <div className="form-group"> 
             <label>Routine Name: </label>
-            <input  type="text"
+            <input type="text"
                 required
                 className="form-control"
                 value={this.state.routinename}
-                onChange={this.onChangeRoutinename}
+                onChange={this.onChangeRoutinename} 
                 />
         </div>
         <div className="form-group">

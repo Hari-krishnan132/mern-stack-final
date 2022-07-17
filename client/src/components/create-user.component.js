@@ -19,6 +19,8 @@ export default class CreateUser extends Component {
     this.updateDetails = this.updateDetails.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
+ 
+
     this.state = {
       username: '',
       gender: 'Male',

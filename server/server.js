@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging')
   });
  }
 
-const uri = "mongodb+srv://dbUser:dbuserpasssword@cluster0.rxplz.mongodb.net/?retryWrites=true&w=majority"
+const uri = "mongodb+srv://dbUser:dbPassword@cluster0.qnwij.mongodb.net/?retryWrites=true&w=majority"
 
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true });
 
@@ -33,11 +33,11 @@ const routinesRouter = require('./routes/routines');
 const workoutlogsRouter = require('./routes/workoutlogs');
 
 
-app.use('/api/users', usersRouter);
-app.use('/api/exercises', exercisesRouter);
-app.use('/api/progressions', progressionsRouter);
-app.use('/api/routines', routinesRouter);
-app.use('/api/workoutlogs', workoutlogsRouter);
+app.use('/users', usersRouter);
+app.use('/exercises', exercisesRouter);
+app.use('/progressions', progressionsRouter);
+app.use('/routines', routinesRouter);
+app.use('/workoutlogs', workoutlogsRouter);
 
 
 app.listen(port, () => {
